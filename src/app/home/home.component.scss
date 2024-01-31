@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500;600;700;900&family=Roboto:ital,wght@0,100;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik+Doodle+Shadow&display=swap");
+@import "./../../sass/variables";
+.home-container {
+  width: 100vw;
+  height: 80vh;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  /* left section styles*/
+  .left-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    gap: 40px;
+    width: 40%;
+    // title styles
+    .title-left-sec {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      i {
+        font-size: 60px;
+      }
+    }
+    // body styles
+    .body-left-sec {
+      .side-title {
+        span {
+          font-family: "Rubik Doodle Shadow", system-ui;
+        }
+      }
+      .text-left-sec {
+        padding: 10px;
+        font-size: 20px;
+      }
+    }
+    // input field styles
+    .search-field {
+      position: relative;
+      width: 100%;
+      i {
+        position: absolute;
+        top: 10px;
+        left: 1%;
+        color: $btns-color;
+        font-size: 20px;
+      }
+      [type="text"] {
+        width: 40%;
+        height: 50px;
+        border: none;
+        outline: none;
+        font-size: 13px;
+        padding: 10px;
+        padding-left: 25px;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+      }
+      [type="submit"] {
+        height: 50px;
+        margin-left: -10px;
+        width: 20%;
+        background: $btns-color;
+        color: $white-color;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+      }
+    }
+    // partnership styles
+    .partnership {
+      padding-top: 20px;
+      .side-title {
+        font-size: 20px;
+        color: $pale-gray-color;
+      }
+      .imgs {
+        padding-top: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        > img {
+          width: 120px;
+          height: 30px;
+        }
+        @media (max-width: 768px) {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      height: fit-content;
+      align-items: center;
+      padding: 0 10px;
+    }
+  }
+  .right-sec {
+    background-image: url("./../../assets/images/right-img.jpg");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 40px;
+    width: 60%;
+    height: 100%;
+    border-radius: 0 0 0 30px;
+    -webkit-border-radius: 0 0 0 30px;
+    -moz-border-radius: 0 0 0 30px;
+    -ms-border-radius: 0 0 0 30px;
+    -o-border-radius: 0 0 0 30px;
+
+    .btns-list {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      width: 100%;
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        li {
+          cursor: pointer;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-width: 100px;
+          padding: 5px;
+          border: 1px solid $white-color;
+          color: $white-color;
+          background-color: $semi-transparent-gray;
+          border-radius: 30px;
+          -webkit-border-radius: 30px;
+          -moz-border-radius: 30px;
+          -ms-border-radius: 30px;
+          -o-border-radius: 30px;
+        }
+      }
+      button {
+        background-color: $btns-color;
+        color: $dark-main-color;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        width: 130px;
+        height: 50px;
+        padding: 10px;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+      }
+      @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+    // statistics section styles
+    .stats-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      align-items: center;
+      .stats {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        background: $white-color;
+        padding: 20px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        width: fit-content;
+        .text {
+          h3 {
+            font-size: 12px;
+          }
+          p {
+            font-size: 14px;
+            color: $pale-gray-color;
+          }
+        }
+        .imgs {
+          width: 50%;
+          height: 100%;
+          > img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+          }
+          > img:not(:nth-child(1)) {
+            margin-left: -20px;
+          }
+          @media (max-width: 768px) {
+            width: 100%;
+            height: fit-content;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            > img:not(:nth-child(1)) {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+}
