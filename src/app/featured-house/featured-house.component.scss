@@ -1,0 +1,182 @@
+@import "./../../sass/variables";
+.featured-house {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  width: $section-width;
+
+  padding: $section-padding;
+  .title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    ul {
+      padding: 5px;
+      justify-content: center;
+      gap: 10px;
+      // width: 30%;
+      flex-wrap: wrap;
+      li {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        gap: 7px;
+        align-items: center;
+        width: fit-content;
+        padding: 10px;
+        background: $pale-gray-color;
+        color: $white-color;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+      }
+    }
+    .arrows {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      span {
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        border: 1px solid $white-color;
+        background: $pale-gray-color;
+        color: $white-color;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+      }
+      @media (max-width: 425px) {
+        width: 100%;
+      }
+    }
+  }
+  .slider {
+    width: $section-width;
+    height: 500px;
+    padding: 10px;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    .cards-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: fit-content;
+      height: fit-content;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 15px;
+      .slider-card {
+        padding-top: 10px;
+        height: 500px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        .img {
+          position: relative;
+          height: 60%;
+          width: 100%;
+          object-fit: contain;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+          }
+          .figure {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            width: fit-content;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 30px;
+            font-size: 20px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+            h3 {
+              font-size: 15px;
+            }
+          }
+        }
+        .text {
+          width: 100%;
+          height: fit-content;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding: 10px;
+          p {
+            font-size: 20px;
+          }
+        }
+        .proflie {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          width: 100%;
+          .profile-img {
+            height: 50px;
+            width: 50px;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              -ms-border-radius: 50%;
+              -o-border-radius: 50%;
+            }
+          }
+          .profile-data {
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 50px);
+            p {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.popular {
+  background: rgb(238, 190, 190);
+  color: red;
+}
+.new-house {
+  background: rgb(193, 193, 250);
+  color: blue;
+}
+.best-deals {
+  background: #b2f5bc;
+  color: green;
+}

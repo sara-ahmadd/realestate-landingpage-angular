@@ -1,5 +1,5 @@
 @import "./variables";
-:root  {
+:root {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -18,8 +18,11 @@ a {
   margin: 0;
   padding: 0;
 }
+ul {
+  list-style: none;
+  display: flex;
+}
 body {
-  height: fit-content;
   overflow-x: hidden;
   background-image: linear-gradient(
     to top left,
@@ -29,17 +32,62 @@ body {
     transparent
   );
 }
-.main-container {
-  background-image: linear-gradient(
-    to bottom right,
-    $btns-color,
-    #ffffff,
-    transparent
-  );
-  width: 100vw;
-  height: 100vh;
-  padding: 20px 30px;
-  @media (max-width: 768px) {
-    padding: 10px 10px;
+
+.special-head {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  align-items: baseline;
+  width: 100%;
+  span {
+    width: 30px;
+    border-bottom: 2px solid $btns-color;
   }
+  h2 {
+    width: fit-content;
+    color: $btns-color;
+    font-size: 25px;
+  }
+}
+.btn-component {
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: $btns-color;
+  color: $white-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+} /* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background: $pale-gray-color;
+} /* Handle */
+::-webkit-scrollbar-thumb {
+  background: $btns-color;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+} /* Handle on hover */
+:-webkit-scrollbar-thumb:hover {
+  background: #aaa8a8;
 }
